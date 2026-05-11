@@ -15,7 +15,8 @@ export default function Login() {
       const user = await login(email, password);
       toast.success('مرحبا ' + user.name);
       if (user.role === 'admin') navigate('/admin');
-      else if (user.role === 'market') navigate('/market');
+      else if (user.role === 'market') navigate('/market-dashboard');
+      else if (user.role === 'customer') navigate('/customer');
       else navigate('/');
     } catch (err) {
       toast.error(err.response?.data?.message || 'خطأ في تسجيل الدخول');

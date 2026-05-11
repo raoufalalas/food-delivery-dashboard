@@ -111,7 +111,10 @@ export default function AdminDashboard() {
             <h1 style={{fontSize:20,fontWeight:500,color:'var(--color-text-primary)'}}>{TABS.find(t=>t.id===tab)?.label}</h1>
             <p style={{fontSize:13,color:'var(--color-text-secondary)',marginTop:2}}>{new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p>
           </div>
-          <button onClick={loadAll} style={{display:'flex',alignItems:'center',gap:6,fontSize:13,padding:'8px 14px'}}>
+          <button onClick={() => { logout(); navigate('/login'); }} style={{display:'flex',alignItems:'center',gap:6,fontSize:13,padding:'8px 14px',background:'#FCEBEB',color:'#A32D2D',border:'none',borderRadius:'var(--border-radius-md)',cursor:'pointer',marginLeft:8}}>
+              خروج
+            </button>
+            <button onClick={loadAll} style={{display:'flex',alignItems:'center',gap:6,fontSize:13,padding:'8px 14px',background:'var(--color-background-secondary)',border:'none',borderRadius:'var(--border-radius-md)',cursor:'pointer',color:'var(--color-text-primary)'}}>
             <i className="ti ti-refresh" style={{fontSize:15}} aria-hidden="true"></i> تحديث
           </button>
         </div>
