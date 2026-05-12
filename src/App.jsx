@@ -5,6 +5,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import CustomerHome from './pages/CustomerHome';
 import MarketPage from './pages/MarketPage';
 import MarketDashboard from './pages/MarketDashboard';
+import DriverDashboard from './pages/DriverDashboard';
 import Login from './pages/Login';
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -18,6 +19,7 @@ export default function App() {
         <Toaster position="top-center"/>
         <Routes>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/driver" element={<ProtectedRoute><DriverDashboard/></ProtectedRoute>}/>
           <Route path="/market-dashboard" element={<ProtectedRoute><MarketDashboard/></ProtectedRoute>}/>
           <Route path="/market/:id" element={<ProtectedRoute><MarketPage/></ProtectedRoute>}/>
           <Route path="/customer" element={<ProtectedRoute><CustomerHome/></ProtectedRoute>}/>

@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 const STATUS_MAP = {
   pending:    { label:'معلق',        bg:'#FAEEDA', color:'#854F0B', next:'accepted',   nextLabel:'قبول' },
   accepted:   { label:'مقبول',       bg:'#E6F1FB', color:'#185FA5', next:'preparing',  nextLabel:'بدء التحضير' },
-  preparing:  { label:'يُحضَّر',     bg:'#E1F5EE', color:'#0F6E56', next:'on_the_way', nextLabel:'جاهز للتوصيل' },
+  preparing:  { label:'يُحضَّر',     bg:'#E1F5EE', color:'#0F6E56', next:null,         nextLabel:null },
   on_the_way: { label:'في الطريق',   bg:'#EEEDFE', color:'#534AB7', next:null,         nextLabel:null },
   delivered:  { label:'تم التسليم',  bg:'#EAF3DE', color:'#3B6D11', next:null,         nextLabel:null },
   cancelled:  { label:'ملغي',        bg:'#FCEBEB', color:'#A32D2D', next:null,         nextLabel:null },

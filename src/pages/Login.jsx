@@ -16,6 +16,7 @@ export default function Login() {
       toast.success('مرحبا ' + user.name);
       if (user.role === 'admin') navigate('/admin');
       else if (user.role === 'market') navigate('/market-dashboard');
+      else if (user.role === 'driver') navigate('/driver');
       else if (user.role === 'customer') navigate('/customer');
       else navigate('/');
     } catch (err) {
